@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f2f5fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 45px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    nav {
+      background: #fff;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #0077b6;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      color: #0077b6;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    section p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .project {
+      flex: 1 1 250px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+    }
+
+    .project h3 {
+      margin-top: 0;
+    }
+
+    .contact-button {
+      background-color: #0077b6;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+
+    .contact-button:hover {
+      background-color: #005f86;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0077b6;
+      color: white;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      .projects {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Your Name</h1>
+    <p>Frontend Developer | Creative Coder</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a frontend developer who enjoys making beautiful and functional websites. I love coding, design, and building meaningful digital experiences. Welcome to my personal portfolio!
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Responsive Web App</h3>
+        <p>Built using HTML, CSS and JavaScript. Fully mobile-friendly and clean UI.</p>
+      </div>
+      <div class="project">
+        <h3>Weather App</h3>
+        <p>Uses OpenWeatherMap API to show real-time weather of any city.</p>
+      </div>
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>This very portfolio – lightweight, stylish and made with love!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Have a project or just want to say hi? Click below!</p>
+    <button class="contact-button" onclick="promptMessage()">Send Message</button>
+    <p id="response"></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
+
+  <script>
+    function promptMessage() {
+      const msg = prompt("What's your message?");
+      if (msg) {
+        document.getElementById("response").innerText = "You said: " + msg;
+      }
+    }
+  </script>
+
+</body>
+
+</html>
